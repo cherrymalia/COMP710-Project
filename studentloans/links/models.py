@@ -13,12 +13,12 @@ class UserAccount(models.Model):
 
 class Student(UserAccount):
     YEAR_IN_SCHOOL = {
-        "FR": "Freshman",
-        "SO": "Sophomore",
-        "JR": "Junior",
-        "SR": "Senior",
-        "GR": "Graduate",
-        "NE": "Not Enrolled"
+        ("FR", "Freshman"),
+        ("SO", "Sophomore"),
+        ("JR", "Junior"),
+        ("SR", "Senior"),
+        ("GR", "Graduate"),
+        ("NE", "Not Enrolled")
     }
     classification = models.CharField(max_length = 2, choices = YEAR_IN_SCHOOL)
     associated_parent = models.IntegerField() # user ID of student's parent (if applicable)
