@@ -21,7 +21,13 @@ class Student(UserAccount):
         ("NE", "Not Enrolled")
     }
     classification = models.CharField(max_length = 2, choices = YEAR_IN_SCHOOL)
-    associated_parent = models.IntegerField() # user ID of student's parent (if applicable)
+    associated_parent = models.IntegerField(null = True, blank = True) # user ID of student's parent (if applicable)
+
+    def __str__(self):
+        return f'Student: {self.first_name} {self.last_name}'
 
 class Parent(UserAccount):
-    associated_student = models.IntegerField() # user ID of parent's child (if applicable)
+    associated_student = models.IntegerField(null = True, blank = True) # user ID of parent's child (if applicable)
+
+    def __str__(self):
+        return f'Parent: {self.first_name} {self.last_name}'
