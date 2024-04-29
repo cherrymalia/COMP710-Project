@@ -36,8 +36,8 @@ INSTALLED_APPS = [
     
     'django.contrib.admin',
     'user.apps.UserConfig',
-    'crispy_forms',
-    'crispy_bootstrap4',
+    "crispy_forms",
+    "crispy_bootstrap4",
     'studentloans',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -139,4 +139,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = "index"
 LOGOUT_REDIRECT_URL = "index"
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = "bootstrap4"

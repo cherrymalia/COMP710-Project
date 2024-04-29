@@ -1,34 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Loan Survey</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>Student Loan Survey</h1>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Loan Questionare</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
 
-    <form class="form">
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .question {
+        margin-bottom: 20px;
+    }
+
+    .options label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .options input {
+        margin-right: 10px;
+    }
+
+    .submit-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+  <h1>Student Loan Questionare</h1>
+<div class= "container">
+ <form id="form">
+   <div class = "question">
+     <div>
       <label for="questionare">Name of your school?</label>
       <input type="text" />
-
+     </div>
+     <div class="question">
       <label for="questionare">Annual Household Income</label>
-      <select id="questionare" name="questionare">
-        <option value="Under">Under $15,000</option>
-        <option value="15000">15,000 - 24,999</option>
-        <option value="25000">25,000 - 34,999</option>
-        <option value="35000">35,000 - 49,999</option>
-        <option value="50000">50,000 - 74,999</option>
-        <option value="75000">75,000 - 99,999</option>
-        <option value="100000">100,000 - 149,999</option>
-        <option value="150000">150,000 - 199,999</option>
-        <option value="25000">25,000 - 34,999</option>
-        <option value="Over">200,000 - Over</option>
-      </select>
+       <div class="options">
+        <select id="questionare" name="questionare">
+          <option value="Under">Under $15,000</option>
+          <option value="15000">15,000 - 24,999</option>
+          <option value="25000">25,000 - 34,999</option>
+          <option value="35000">35,000 - 49,999</option>
+          <option value="50000">50,000 - 74,999</option>
+          <option value="75000">75,000 - 99,999</option>
+          <option value="100000">100,000 - 149,999</option>
+          <option value="150000">150,000 - 199,999</option>
+          <option value="25000">25,000 - 34,999</option>
+          <option value="Over">200,000 - Over</option>
 
-
+        </select>
+       </div>
+     </div>
+	<div class="question">
       <label for="questionare">How long do you plan to repay your loans?</label>
+      <div class="options">
       <input type="checkbox" id="oneyear" value="oneyear" name="dependence" />
       <label for="oneyear">1 year</label>
       <input type="checkbox" id="threeyears" value="threeyears" name="dependence" />
@@ -37,24 +93,30 @@
       <label for="fiveyears">5 years</label>
       <input type="checkbox" id="sevenyears" value="sevenyears" name="dependence" />
       <label for="sevenyears">7 years</label>
-
+      </div>
+     </div>
+     <div class="question">
       <label for="questionare">How long do you plan to be enrolled in school?</label>
-      <input type="checkbox" id="fouryears" value="fouryears" name="dependence" />
+       <div class="options"><input type="checkbox" id="fouryears" value="fouryears" name="dependence" />
       <label for="fouryears">4 years</label>
       <input type="checkbox" id="sixyears" value="sixyears" name="dependence" />
       <label for="sixyears">6 years</label>
       <input type="checkbox" id="eightyears" value="eigthyears" name="dependence" />
-      <label for="eightyears">8 years</label>
-
-      <label for="questionare">Have you recieved a pell grant?</label>
-
-      <input type="checkbox" id="yes" value="yes" name="dependence" />
-      <label for="scholarship">yes</label>
-      <input type="checkbox" id="no" value="no" name="dependence" />
-      <label for="self-financed">no</label>
-
-      <input type="submit" value="Submit">
+      <label for="eightyears">8 years</label></div>
       
+     </div>
+     <div class="question">
+        <label for="questionare">Have you recieved a pell grant?</label>
+
+        <input type="checkbox" id="yes" value="yes" name="dependence" />
+        <label for="scholarship">yes</label>
+        <input type="checkbox" id="no" value="no" name="dependence" />
+        <label for="self-financed">no</label>
+       <div>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
     </form>
-  </body>
+</div>
+
+</body>
 </html>
