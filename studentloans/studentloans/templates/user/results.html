@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Results</title>
+</head>
+<body>
+<h1>Loan Application Results</h1>
+<div class="loan-results">
+    {% for loan, status in loans_prediction.ipynb %}
+
+    <h3>{{ personal loan }}</h3>
+    <p class="status"><span class="{{ 'approved' if status == 'Approved' else 'denied' }}">{{ status }}</span></p>
+
+    <h3>{{ parent loan }}</h3>
+    <p class="status"><span class="{{ 'approved' if status == 'Approved' else 'denied' }}">{{ status }}</span></p>
+
+    <h3>{{ federal loan }}</h3>
+    <p class="status"><span class="{{ 'approved' if status == 'Approved' else 'denied' }}">{{ status }}</span></p>
+
+    <h3>{{ private loan }}</h3>
+    <p class="status"><span class="{{ 'approved' if status == 'Approved' else 'denied' }}">{{ status }}</span></p>
+
+    <h3>{{ self-financed loan }}</h3>
+    <p class="status"><span class="{{ 'approved' if status == 'Approved' else 'denied' }}">{{ status }}</span></p>
+
+</div>
+<footer>
+    <p>For more information and resources on student loans, please visit our <a href="/resource-page">Student Loan Resource Page</a>.</p>
+</footer>
+</body>
+</html>
